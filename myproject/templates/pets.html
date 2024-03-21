@@ -5,10 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Cats</title>
+    <link rel="stylesheet" href="../static/style.css">
+
 </head>
 <body>
 <img src="{% static 'images/cats_with_fire.jpg' %}">
+    <header class="container">
 <h1>All the cats are:</h1>
+    </header>
+<div class="container patterns pt1">
 <ul>
     {% for cat in cats %}
     <li>
@@ -16,5 +21,7 @@
     </li>
     {% endfor %}
 </ul>
+<a href="/index.html">Click to go back to Home</a>
+</div>
 </body>
 </html>

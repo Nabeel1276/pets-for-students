@@ -1,0 +1,133 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-color: #0ae;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header.container {
+    text-align: center;
+    padding: 20px 0;
+        background-image: repeating-linear-gradient(45deg, #f9f9f9, #f9f9f9 10px, #e9e9e9 10px, #e9e9e9 20px);
+
+}
+
+header.container h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the image */
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Styling for the number of cats */
+strong {
+    color: #007bff;
+}
+
+/* Styling for the list of cats */
+ul ul {
+    margin-left: 20px;
+}
+
+ul ul li {
+    color: #555;
+}
+
+/* Styling for the link */
+a {
+    display: block;
+    margin-top: 20px;
+}
+
+h1{
+    color: #007bff;
+}
+
+.patterns {
+    width: 100vw;
+    height: 100vw;
+}
+
+ul li:hover {
+    background-color: white;
+}
+/* Gradient background */
+body {
+    background: linear-gradient(to bottom right, #66ccff, #00f8ff);
+}
+
+.patterns {
+    background-image: repeating-linear-gradient(45deg, #f9f9f9, #f9f9f9 10px, #e9e9e9 10px, #e9e9e9 20px);
+}
+
+.pt1 {
+    padding-top: 40px;
+}
+
+/* Additional advanced CSS */
+.container {
+    position: relative;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ffffff 0%, #f9f9f9 100%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+ul ul li::before {
+    content: "\2022";
+    color: #007bff;
+    margin-right: 5px;
+}
+
+.patterns {
+    background-image: repeating-linear-gradient(45deg, #f9f9f9, #f9f9f9 10px, #e9e9e9 10px, #e9e9e9 20px);
+}
+
+.pt1 {
+    padding-top: 40px;
+}

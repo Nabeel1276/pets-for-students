@@ -1,6 +1,8 @@
 from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+from django.db.models.signals import post_delete
+
 
 
 class Student(models.Model):
@@ -25,3 +27,9 @@ def update_number_of_cats(sender, instance, created, **kwargs):
         student = instance.owner
         student.numberOfCats = student.cat_set.count()
         student.save()
+
+@receiver(post_delete, sender=Cat)
+def decrement_number_of_cats(sender, instance, **kwargs):
+    student = instance.owner
+    student.numberOfCats = student.cat_set.count()
+    student.save()

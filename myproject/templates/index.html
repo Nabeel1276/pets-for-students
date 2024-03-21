@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Students</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
 <img src="{% static 'images/cat.png' %}"/>
+<header class="container">
 <h1>The students and their cats are: </h1>
-<div>
+</header>
+
+<div class="container patterns pt1">
  <ul>
         {% for student in students %}
-            <li>{{ student.firstName }} {{ student.secondName }} has <strong>{{ student.numberOfCats }}</strong> cats:
+            <li>{{ student.firstName }} {{ student.secondName }} has
+                {% if student.numberOfCats == 1 %}
+                    <strong>1</strong> cat:
+                {% else %}
+                    <strong>{{ student.numberOfCats }}</strong> cats:
+                {% endif %}
             <ul>
                  {% for cat in student.cat_set.all|dictsort:"name" %}
-                    <li>{{ cat.name }}</li>
+                    <li>{{ cat.name|lower }}</li>
                 {% endfor %}
             </ul>
                 </li>
         {% endfor %}
     </ul>
+    <a href="pets/">About pets of students</a>
     </div>
-<a href="pets/">About pets of students</a>
 </body>
 </html>
