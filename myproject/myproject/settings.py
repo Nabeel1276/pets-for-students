@@ -28,7 +28,7 @@ SECRET_KEY = 'zunf_kjcfd#8u7q=&g-8r@ua=7!9t3l28ntfw4pppnqmr4*+^a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nabeel1235.pythonanywhere.com']
+# ALLOWED_HOSTS = ['nabeel1235.pythonanywhere.com']
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Application definition
