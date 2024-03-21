@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+</head>
+<body>
+<img src="{% static 'images/cats_with_fire.jpg' %}">
+<h1>All the cats are:</h1>
+<ul>
+    {% for cat in cats %}
+    <li>
+            {{cat.name}}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

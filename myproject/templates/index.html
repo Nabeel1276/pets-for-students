@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+<img src="{% static 'images/cat.png' %}"/>
+<h1>The students and their cats are: </h1>
+<div>
+ <ul>
+        {% for student in students %}
+            <li>{{ student.firstName }} {{ student.secondName }} has <strong>{{ student.numberOfCats }}</strong> cats:
+            <ul>
+                 {% for cat in student.cat_set.all|dictsort:"name" %}
+                    <li>{{ cat.name }}</li>
+                {% endfor %}
+            </ul>
+                </li>
+        {% endfor %}
+    </ul>
+    </div>
+<a href="pets/">About pets of students</a>
+</body>
+</html>
